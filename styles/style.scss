@@ -73,6 +73,10 @@ body {
     width: 588px;
     color: #222d35;
     text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     &_close {
       color: #000;
@@ -90,7 +94,11 @@ body {
       cursor: pointer;
 
       &:hover {
-        opacity: 7;
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.9;
       }
     }
 
