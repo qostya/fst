@@ -91,11 +91,12 @@ body {
 
 .b-gift {
   text-align: center;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .b-gift_count {
     width: 30px;
     height: 30px;
-    line-height: 31px;
+    line-height: 30px;
     color: #fff;
     text-align: center;
     background-color: #b75885;
@@ -126,5 +127,51 @@ body {
       background-position: -138px 0; }
     .b-gift_image_4 {
       background-position: -207px 0; }
+  .b-gift:hover .b-gift_action {
+    bottom: 20px;
+    opacity: 1; }
+  .b-gift_action {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    opacity: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+  .b-gift_button {
+    border: none;
+    outline: none;
+    padding: 6px 18px 7px;
+    color: #fff;
+    cursor: pointer;
+    background: #0095d4;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #0095d4 0%, #2989d8 32%, #007bb8 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #0095d4 0%, #2989d8 32%, #007bb8 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #0095d4 0%, #2989d8 32%, #007bb8 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0095d4', endColorstr='#007bb8',GradientType=0 );
+    /* IE6-9 */
+    -webkit-box-shadow: 0 0 13px 3px #fff;
+    -moz-box-shadow: 0 0 13px 3px #fff;
+    box-shadow: 0 0 13px 3px #fff;
+    text-shadow: 0 1px #215772; }
+    .b-gift_button:active {
+      background: #2989d8;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #007bb8 0%, #2989d8 32%, #0095d4 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #007bb8 0%, #2989d8 32%, #0095d4 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #007bb8 0%, #2989d8 32%, #0095d4 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007bb8', endColorstr='#0095d4',GradientType=0 );
+      /* IE6-9 */ }
 
 /*# sourceMappingURL=style.css.map */
