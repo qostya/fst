@@ -41,6 +41,22 @@ body {
     width: 588px;
     color: #222d35;
     text-align: center; }
+    .b-modal_gift_close {
+      color: #000;
+      opacity: 0.5;
+      font-size: 30px;
+      font-style: normal;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 45px;
+      width: 50px;
+      line-height: 40px;
+      text-align: center;
+      z-index: 3;
+      cursor: pointer; }
+      .b-modal_gift_close:hover {
+        opacity: 7; }
     .b-modal_gift_items {
       padding: 30px 40px; }
     .b-modal_gift_text {
@@ -148,6 +164,7 @@ body {
     padding: 6px 18px 7px;
     color: #fff;
     cursor: pointer;
+    text-shadow: 0 1px #215772;
     background: #0095d4;
     /* Old browsers */
     background: -moz-linear-gradient(top, #0095d4 0%, #2989d8 32%, #007bb8 100%);
@@ -158,10 +175,9 @@ body {
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0095d4', endColorstr='#007bb8',GradientType=0 );
     /* IE6-9 */
-    -webkit-box-shadow: 0 0 13px 3px #fff;
-    -moz-box-shadow: 0 0 13px 3px #fff;
-    box-shadow: 0 0 13px 3px #fff;
-    text-shadow: 0 1px #215772; }
+    -webkit-box-shadow: 0 1px 2px #A8A8A8, 0 0 13px 3px #fff;
+    -moz-box-shadow: 0 1px 2px #A8A8A8, 0 0 13px 3px #fff;
+    box-shadow: 0 1px 2px #A8A8A8, 0 0 13px 3px #fff; }
     .b-gift_button:active {
       background: #2989d8;
       /* Old browsers */

@@ -12,7 +12,7 @@
   border-radius: $radius;
 }
 
-@mixin box-shadow($shadow) {
+@mixin box-shadow($shadow...) {
   -webkit-box-shadow: $shadow;
   -moz-box-shadow: $shadow;
   box-shadow: $shadow;
@@ -73,6 +73,26 @@ body {
     width: 588px;
     color: #222d35;
     text-align: center;
+
+    &_close {
+      color: #000;
+      opacity: 0.5;
+      font-size: 30px;
+      font-style: normal;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 45px;
+      width: 50px;
+      line-height: 40px;
+      text-align: center;
+      z-index: 3;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 7;
+      }
+    }
 
     &_items {
       padding: 30px 40px;
@@ -219,6 +239,7 @@ body {
     padding: 6px 18px 7px;
     color: #fff;
     cursor: pointer;
+    text-shadow: 0 1px #215772;
 
 
     background: #0095d4; /* Old browsers */
@@ -227,8 +248,7 @@ body {
     background: linear-gradient(to bottom,  #0095d4 0%,#2989d8 32%,#007bb8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0095d4', endColorstr='#007bb8',GradientType=0 ); /* IE6-9 */
 
-    @include box-shadow(0 0 13px 3px #fff);
-    @include text-shadow(0 1px #215772);
+    @include box-shadow(0 1px 2px #A8A8A8, 0 0 13px 3px #fff);
 
     &:active {
       background: #2989d8; /* Old browsers */
