@@ -113,11 +113,37 @@ body {
     .b-modal_gift_success {
       position: absolute;
       top: 0;
+      display: block;
       left: 0;
       width: 100%;
       z-index: 4;
+      opacity: 0;
       height: 100%;
-      background: rgba(0, 0, 0, 0.2); }
+      background: rgba(0, 0, 0, 0.2);
+      -webkit-transform: scaleY(0);
+      -moz-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+      -o-transform: scaleY(0);
+      transform: scaleY(0);
+      -webkit-transition: transform 0.1s linear, opacity 0.2s;
+      -moz-transition: transform 0.1s linear, opacity 0.2s;
+      -ms-transition: transform 0.1s linear, opacity 0.2s;
+      -o-transition: transform 0.1s linear, opacity 0.2s;
+      transition: transform 0.1s linear, opacity 0.2s; }
+      .b-modal_gift_success._active {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: transform 0.2s cubic-bezier(0.57, -0.03, 0.4, 1.34), opacity 0.2s;
+        -moz-transition: transform 0.2s cubic-bezier(0.57, -0.03, 0.4, 1.34), opacity 0.2s;
+        -ms-transition: transform 0.2s cubic-bezier(0.57, -0.03, 0.4, 1.34), opacity 0.2s;
+        -o-transition: transform 0.2s cubic-bezier(0.57, -0.03, 0.4, 1.34), opacity 0.2s;
+        transition: transform 0.2s cubic-bezier(0.57, -0.03, 0.4, 1.34), opacity 0.2s; }
+      .b-modal_gift_success._visible {
+        display: block; }
 
 .b-gift {
   text-align: center;
@@ -147,7 +173,7 @@ body {
   .b-gift_image {
     width: 69px;
     height: 100px;
-    background-image: url(../images/gift_1.png);
+    background-image: url(../images/gifts.png);
     display: inline-block; }
     .b-gift_image_1 {
       background-position: 0 0; }
@@ -207,13 +233,20 @@ body {
 .b-gift-win {
   position: relative;
   text-align: center; }
+  .b-gift-win:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: url(../images/win-top-bottom.png) no-repeat 0 -40px; }
   .b-gift-win:after {
     content: '';
     display: block;
     width: 100%;
     height: 40px;
     position: absolute;
-    background: url(../images/win-bottom.png) no-repeat;
+    background: url(../images/win-top-bottom.png) no-repeat;
     bottom: -40px;
     left: 0; }
   .b-gift-win_actions {
@@ -228,8 +261,19 @@ body {
     color: #fff;
     width: 200px;
     text-align: left; }
+    .b-gift-win_share label {
+      height: 20px;
+      display: inline-block;
+      line-height: 15px;
+      position: relative;
+      cursor: pointer; }
     .b-gift-win_share input:checked ~ span:after {
-      opacity: 1; }
+      width: 15px;
+      -webkit-transition: width 0.3s;
+      -moz-transition: width 0.3s;
+      -ms-transition: width 0.3s;
+      -o-transition: width 0.3s;
+      transition: width 0.3s; }
     .b-gift-win_share span {
       vertical-align: middle; }
       .b-gift-win_share span:before {
@@ -248,21 +292,22 @@ body {
       .b-gift-win_share span:after {
         content: '';
         display: block;
-        opacity: 0;
+        opacity: 1;
         position: absolute;
-        width: 15px;
+        width: 0;
         height: 15px;
         left: 1px;
-        -webkit-transition: opacity 0.15s;
-        -moz-transition: opacity 0.15s;
-        -ms-transition: opacity 0.15s;
-        -o-transition: opacity 0.15s;
-        transition: opacity 0.15s;
-        top: 10px;
+        top: 3px;
+        -webkit-transition: width 0.1s;
+        -moz-transition: width 0.1s;
+        -ms-transition: width 0.1s;
+        -o-transition: width 0.1s;
+        transition: width 0.1s;
         background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJZJREFUeNpi/P//PwM5gImBTEC2RhYYwz0pn2hNO+dNJNpGOSBuB2JmXE4FucAYTUweiA8AcSkQW+LSOA2IjwCxB5SvANUEsjEBKodV40Qg/gTEG4A4DapJFojjgXgJvlC9CsSOQPwBiGcCsQwQxwLxUmKi4xoQOwHxMyCOBuLleKMDi2YVIP5OTgL4ji9+GOmeVgECDAC4+B1n7MjVIwAAAABJRU5ErkJggg==) no-repeat; }
     .b-gift-win_share input {
       display: none; }
   .b-gift-win_submit {
+    cursor: pointer;
     border: none;
     outline: none;
     font-size: 15px;
@@ -337,10 +382,5 @@ body {
       margin: 0 auto; }
     .b-gift-win_images img:first-child {
       margin-right: 15px; }
-  .b-gift-win_head {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background: url(../images/win-head.png) no-repeat; }
 
 /*# sourceMappingURL=style.css.map */

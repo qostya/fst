@@ -29,12 +29,12 @@
 
                 <div class="b-modal_gift_body">
                     <div class="b-modal_gift_items">
-                        <!-- Здесь можно было использовать инлайн-блоки, но не люблю обнулять размер шрифтов и закомментирывать отступы.
+                        <!-- Здесь можно было использовать инлайн-блоки, но не люблю обнулять размер шрифтов или закомментирывать отступы.
                         Также подошли бы флексбоксы, но в крупных проектах их лучше пока не использовать.
                          -->
                         <div class="b-modal_row">
                             <div class="b-modal_col-4">
-                                <div class="b-gift">
+                                <div class="b-gift js-show-win">
                                     <!-- Здесь могло бы быть обычное изображение, но работу со спрайтами показать, скорее всего, важнее -->
                                     <div class="b-gift_image b-gift_image_1"></div>
                                     <div class="b-gift_price">Бесплатно</div>
@@ -48,7 +48,7 @@
                             </div>
 
                             <div class="b-modal_col-4">
-                                <div class="b-gift">
+                                <div class="b-gift js-show-win">
                                     <div class="b-gift_image b-gift_image_2"></div>
                                     <div class="b-gift_price">0.5 ФМ</div>
 
@@ -59,7 +59,7 @@
                             </div>
 
                             <div class="b-modal_col-4">
-                                <div class="b-gift">
+                                <div class="b-gift js-show-win">
                                     <div class="b-gift_image b-gift_image_3"></div>
                                     <div class="b-gift_price">1 ФМ</div>
 
@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="b-modal_col-4">
-                                <div class="b-gift">
+                                <div class="b-gift js-show-win">
                                     <div class="b-gift_image b-gift_image_4"></div>
                                     <div class="b-gift_price">5 ФМ</div>
 
@@ -85,10 +85,9 @@
 
                 <div class="b-modal_gift_success">
                     <div class="b-gift-win">
-                        <div class="b-gift-win_head"></div>
                         <div class="b-gift-win_body">
                             <div class="b-gift-win_images">
-                                <img class="b-modal_gift_image" src="images/user.jpg" width="136px" alt=""/>
+                                <img class="b-modal_gift_image" src="images/user.jpg" width="136" alt=""/>
                                 <img class="b-modal_gift_image" src="images/user_m.jpg" alt=""/>
                             </div>
 
@@ -100,14 +99,13 @@
                             <h4>Алёна ответила вам взаимностью!</h4>
 
                             <div class="b-gift-win_actions">
-                                <button class="b-gift-win_submit" type="button">Отчично!</button>
+                                <button class="b-gift-win_submit js-hide-win" type="button">Отчично!</button>
 
                                 <div class="b-gift-win_share">
                                     <label><input type="checkbox"/><span>Рассказать друзьям</span></label>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -115,5 +113,7 @@
     </div>
 </div>
 
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
