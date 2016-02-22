@@ -25,8 +25,13 @@
 
     $('.js-hide-win').click(
         function () {
-            $('.b-modal_gift_success')
-                .removeClass('_active');
+            // чтобы не было скачков
+            setTimeout(
+                function () {
+                    $('.b-modal_gift_success')
+                        .removeClass('_active');
+                }, 120
+            );
 
             return false;
         }
